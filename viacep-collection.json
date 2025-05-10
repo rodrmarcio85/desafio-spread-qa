@@ -1,0 +1,157 @@
+{
+  "info": {
+    "name": "ViaCEP API Test - Atualizada",
+    "_postman_id": "updated-viacep-test",
+    "description": "Cole\u00e7\u00e3o de testes atualizada para a API ViaCEP",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "CT01 - Consulta v\u00e1lida de CEP",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://viacep.com.br/ws/01001-000/json/",
+          "protocol": "https",
+          "host": [
+            "viacep",
+            "com",
+            "br"
+          ],
+          "path": [
+            "ws",
+            "01001-000",
+            "json"
+          ]
+        }
+      }
+    },
+    {
+      "name": "CT02 - Consulta com CEP inexistente",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://viacep.com.br/ws/00000-000/json/",
+          "protocol": "https",
+          "host": [
+            "viacep",
+            "com",
+            "br"
+          ],
+          "path": [
+            "ws",
+            "00000-000",
+            "json"
+          ]
+        }
+      }
+    },
+    {
+      "name": "CT03 - Consulta com CEP inv\u00e1lido",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://viacep.com.br/ws/abc123/json/",
+          "protocol": "https",
+          "host": [
+            "viacep",
+            "com",
+            "br"
+          ],
+          "path": [
+            "ws",
+            "abc123",
+            "json"
+          ]
+        }
+      }
+    },
+    {
+      "name": "CT04 - Consulta de outro CEP v\u00e1lido",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://viacep.com.br/ws/30130-010/json/",
+          "protocol": "https",
+          "host": [
+            "viacep",
+            "com",
+            "br"
+          ],
+          "path": [
+            "ws",
+            "30130-010",
+            "json"
+          ]
+        }
+      }
+    },
+    {
+      "name": "CT05 - Consulta com CEP fora da base nacional",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://viacep.com.br/ws/99999-999/json/",
+          "protocol": "https",
+          "host": [
+            "viacep",
+            "com",
+            "br"
+          ],
+          "path": [
+            "ws",
+            "99999-999",
+            "json"
+          ]
+        }
+      }
+    },
+    {
+      "name": "CT06 - Consulta com CEP vazio",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://viacep.com.br/ws//json/",
+          "protocol": "https",
+          "host": [
+            "viacep",
+            "com",
+            "br"
+          ],
+          "path": [
+            "ws",
+            "",
+            "json"
+          ]
+        }
+      }
+    },
+    {
+      "name": "CT07 - Consulta com caracteres especiais",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://viacep.com.br/ws/@#$%\u00a8&*/json/",
+          "protocol": "https",
+          "host": [
+            "viacep",
+            "com",
+            "br"
+          ],
+          "path": [
+            "ws",
+            "@#$%\u00a8&*",
+            "json"
+          ]
+        }
+      }
+    }
+  ]
+}
